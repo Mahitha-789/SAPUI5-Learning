@@ -1,7 +1,9 @@
-specVersion: '3.0'
+specVersion: "2.6"
 metadata:
   name: ui5.quickstart
 type: application
+server:
+  customMiddleware: []
 resources:
   configuration:
     paths:
