@@ -4,7 +4,7 @@ sap.ui.define([
 ], (Controller, MessageToast) => {
    "use strict";
 
-   return Controller.extend("ui5.walkthrough.controller.App", {
+   return Controller.extend("ui5.walkthrough.controller.HelloPanel", {
       onShowHello() {
          // read msg from i18n model
          const oBundle = this.getView().getModel("i18n").getResourceBundle();
