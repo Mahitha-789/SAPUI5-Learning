@@ -8,6 +8,15 @@
     "type": "application",
     "applicationVersion": {
       "version": "1.0.0"
+    },
+    "dataSources": {
+      "invoiceRemote": {
+        "uri": "/V2/Northwind/Northwind.svc/",
+        "type": "OData",
+        "settings": {
+          "odataVersion": "2.0"
+        }
+      }
     }
   },
   "sap.ui": {
@@ -31,15 +40,12 @@
         "type": "sap.ui.model.resource.ResourceModel",
         "settings": {
           "bundleName": "ui5.walkthrough.i18n.i18n",
-          "supportedLocales": [
-            "en"
-          ],
+          "supportedLocales": ["en"],
           "fallbackLocale": "en"
         }
       },
       "invoice": {
-        "type": "sap.ui.model.json.JSONModel",
-        "uri": "Invoice.json"
+        "dataSource": "invoiceRemote"
       }
     },
     "rootView": {

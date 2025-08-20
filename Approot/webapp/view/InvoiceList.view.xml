@@ -10,11 +10,11 @@
       items="{
          path : 'invoice>/Invoices',
          sorter : {
-            path : 'ShipperName',
+            path : 'ShipName',
             group : true
          }
       }">
-
+      
       <headerToolbar>
          <Toolbar>
             <Title text="{i18n>invoiceListTitle}"/>
@@ -32,19 +32,16 @@
             numberUnit="{view>/currency}">
 
             <attributes>
-               <ObjectAttribute text="{invoice>ShipperName}"/>
-               <ObjectAttribute text="{invoice>ShippedDate}"/>
+               <ObjectAttribute text="{invoice>ShipperName}" />
+               <ObjectAttribute text="{invoice>ShippedDate}" />
             </attributes>
 
             <firstStatus>
                <ObjectStatus 
-                  text="{
-                     path: 'invoice>Status',
-                     formatter: '.statusText'
-                  }"/>
+                  text="{path: 'invoice>Status', formatter: '.statusText'}"/>
             </firstStatus>
+
          </ObjectListItem>
       </items>
    </List>
 </mvc:View>
-
