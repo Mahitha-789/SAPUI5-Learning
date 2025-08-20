@@ -4,6 +4,16 @@
    <Dialog
       id="helloDialog"
       title="Hello {/recipient/name}">
+      
+      <!-- Dialog Content with Icon -->
+      <content>
+         <core:Icon
+            src="sap-icon://hello-world"
+            size="8rem"
+            class="sapUiMediumMargin"/>
+      </content>
+      
+      <!-- Close Button -->
       <beginButton>
          <Button
             text="{i18n>dialogCloseButtonText}"
@@ -11,3 +21,4 @@
       </beginButton>
    </Dialog>
 </core:FragmentDefinition>
+
