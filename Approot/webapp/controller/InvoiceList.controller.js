@@ -44,6 +44,11 @@ sap.ui.define([
 				default:
 					return sStatus;
 			}
+		},
+		onPress() {
+			const oRouter = this.getOwnerComponent().getRouter();
+			oRouter.navTo("detail");
 		}
+
 	});
 });
