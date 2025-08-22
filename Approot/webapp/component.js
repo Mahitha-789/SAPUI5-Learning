@@ -31,6 +31,11 @@ sap.ui.define([
 
             // create the views based on the url/hash
             this.getRouter().initialize();
+        },
+
+        // 👇 THIS MUST BE INSIDE THE EXTEND OBJECT
+        getContentDensityClass() {
+            return Device.support.touch ? "sapUiSizeCozy" : "sapUiSizeCompact";
         }
     });
 });
