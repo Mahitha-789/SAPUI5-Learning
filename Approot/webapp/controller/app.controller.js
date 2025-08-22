@@ -1,18 +1,14 @@
 sap.ui.define([
-   "sap/ui/core/mvc/Controller",
-   "sap/m/MessageToast"
-], (Controller, MessageToast) => {
-   "use strict";
+	"sap/ui/core/mvc/Controller"
+], (Controller) => {
+	"use strict";
 
-   return Controller.extend("ui5.walkthrough.controller.App", {
-      onShowHello() {
-         // read msg from i18n model
-         const oBundle = this.getView().getModel("i18n").getResourceBundle();
-         const sRecipient = this.getView().getModel().getProperty("/recipient/name");
-         const sMsg = oBundle.getText("helloMsg", [sRecipient]);
+	return Controller.extend("ui5.walkthrough.controller.App", {
 
-         // show message
-         MessageToast.show(sMsg);
-      }
-   });
+		onInit() {
+			// Apply content density class to root view
+			this.getView().addStyleClass(this.getOwnerComponent().getContentDensityClass());
+		}
+	});
 });
+
